@@ -1,3 +1,13 @@
+"""
+ship_positions come from PR #1's aisstream.io worldwide snapshot.
+all_stations come from AISHub (see fetch_aishub_stations.py) - a
+separate contributor-receiver network, not aisstream's own
+infrastructure. aisstream doesn't publish its station locations, so
+AISHub's network is used here only as a general reference for what a
+real-world AIS receiver network's geography looks like (fixed,
+coastal, land-based) versus moving ship traffic - not as a
+measurement of aisstream's specific coverage.
+"""
 import json
 
 import kaleido
