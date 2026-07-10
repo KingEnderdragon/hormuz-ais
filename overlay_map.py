@@ -1,6 +1,8 @@
 import json
 
+import kaleido
 import plotly.graph_objects as go
+from choreographer.browsers.chromium import ChromeNotFoundError
 
 with open("snapshot_positions.json") as f:
     ship_positions = json.load(f)
@@ -67,5 +69,13 @@ fig.update_layout(
     legend=dict(x=0.01, y=0.02, bgcolor="rgba(255,255,255,0.8)"),
 )
 
-fig.write_image("snapshot_map_overlay.png", scale=2)
+try:
+    fig.write_image("snapshot_map_overlay.png", scale=2)
+except ChromeNotFoundError:
+    # No system Chrome/Chromium on this machine (kaleido does not auto-download
+    # one) - fetch kaleido's own copy once, then retry.
+    print("No browser found for image export - downloading kaleido's Chrome (one-time)...")
+    kaleido.get_chrome_sync()
+    fig.write_image("snapshot_map_overlay.png", scale=2)
+
 print("wrote snapshot_map_overlay.png")
