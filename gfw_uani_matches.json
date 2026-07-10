@@ -1,0 +1,18 @@
+{
+  "method": "Cross-reference of GFW public-global-presence 30-day vessel positions in Hormuz/Gulf of Oman/western-gate box (54-62E, 22-28N) against IMO numbers mentioned in scraped UANI Iran Tanker Tracker articles.",
+  "gfw_region_total_records_30d": 181611,
+  "gfw_distinct_vessels_30d": 3326,
+  "uani_distinct_imos_mentioned": 13,
+  "matches": [
+    {
+      "imo": "9524475",
+      "currently_broadcasting_as": "ST. NIKOLAS",
+      "flag": "MHL",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_last_30d": 262,
+      "presence_days_last_30d": 15,
+      "mmsi": "538010676",
+      "uani_source_article": "February 2022 Iran Tanker Tracking"
+    }
+  ]
+}
