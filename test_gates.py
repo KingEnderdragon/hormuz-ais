@@ -41,7 +41,7 @@ async def run():
                 count += 1
                 msg = json.loads(raw)
                 mtype = msg.get("MessageType")
-                meta = msg.get("Metadata", {})
+                meta = msg.get("MetaData", {})
                 print(f"[{datetime.now(timezone.utc).isoformat()}] {mtype} "
                       f"mmsi={meta.get('MMSI')} name={meta.get('ShipName')} "
                       f"lat={meta.get('latitude')} lon={meta.get('longitude')}")

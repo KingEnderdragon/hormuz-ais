@@ -110,7 +110,7 @@ async def run():
                 async for raw in ws:
                     msg = json.loads(raw)
                     mtype = msg.get("MessageType")
-                    mmsi = msg.get("Metadata", {}).get("MMSI")
+                    mmsi = msg.get("MetaData", {}).get("MMSI")
 
                     if mtype == "PositionReport":
                         data = msg["Message"]["PositionReport"]
@@ -121,7 +121,7 @@ async def run():
                         upsert_ship(conn, mmsi, data)
                         static_count += 1
 
-                    print(f"[{mtype}] mmsi={mmsi} name={msg.get('Metadata', {}).get('ShipName')}")
+                    print(f"[{mtype}] mmsi={mmsi} name={msg.get('MetaData', {}).get('ShipName')}")
 
                     if (pos_count + static_count) % 20 == 0 and (pos_count + static_count) > 0:
                         conn.commit()
