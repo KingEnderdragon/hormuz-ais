@@ -1,0 +1,3 @@
+timestamp_utc,gate,station_id,station_name,ships_all,ships_unique,uptime_pct,cargo,tankers,high_speed,other_auxiliary,unknown
+2026-07-10T09:43:07.796764+00:00,western_persian_gulf_gate,2528,Abu Dhabi,68,68,100,17,30,1,17,3
+2026-07-10T09:45:08.208299+00:00,western_persian_gulf_gate,2528,Abu Dhabi,75,75,100,21,32,1,17,4
