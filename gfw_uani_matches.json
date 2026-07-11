@@ -1,0 +1,1956 @@
+{
+  "method": "Cross-reference by IMO of Global Fishing Watch's public-global-presence dataset (hourly-sampled, gridded AIS-derived vessel presence - NOT raw continuous per-message positions; GFW's own docs describe it as one position per hour per vessel) against IMO numbers mentioned in the scraped UANI Iran Tanker Tracker corpus. IMO is used as the join key because it's a stable identifier independent of GFW's sampling/gridding resolution, unlike raw lat/lon or MMSI (which can be reassigned/spoofed).",
+  "gfw_query": {
+    "dataset": "public-global-presence:v4.0",
+    "spatial_resolution": "LOW",
+    "temporal_resolution": "DAILY",
+    "date_range": "2026-06-10,2026-07-09",
+    "bbox_lon_lat": [
+      54.0,
+      22.0,
+      62.0,
+      28.0
+    ]
+  },
+  "fetched_at_utc": "2026-07-11T05:35:23.144011+00:00",
+  "gfw_region_total_records": 189774,
+  "gfw_distinct_vessels_with_imo": 3369,
+  "uani_imo_extraction_anomalies_count": 5,
+  "uani_imos_checked": [
+    {
+      "imo": "7230666",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "8614467",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "8617055",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "8818219",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "8818843",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "8912546",
+      "source_article": "Iran War Shipping Update\u2014March 26, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-26-2026"
+    },
+    {
+      "imo": "8912558",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9002491",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9005065",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9007386",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9014456",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9041057",
+      "source_article": "August 2024 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/august-2024-iran-tanker-tracker"
+    },
+    {
+      "imo": "9041655",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9046784",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9052331",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9081825",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9081837",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9088536",
+      "source_article": "Iran War Shipping Update\u2014March 17, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-17-2026"
+    },
+    {
+      "imo": "9102198",
+      "source_article": "February 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/february-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9102241",
+      "source_article": "October 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/october-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9105073",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9105906",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9114581",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9114608",
+      "source_article": "August 2024 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/august-2024-iran-tanker-tracker"
+    },
+    {
+      "imo": "9127033",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9133070",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9133587",
+      "source_article": "May 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9133850",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9142150",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9143506",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9144067",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9149225",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9149251",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9150377",
+      "source_article": "November 2021 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/november-2021-iran-tanker-tracking"
+    },
+    {
+      "imo": "9150767",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9153513",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9157765",
+      "source_article": "March 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9162916",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9162928",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9165542",
+      "source_article": "March 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9165786",
+      "source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9166417",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9166675",
+      "source_article": "Is COSCO At It Again?",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/cosco-at-it-again"
+    },
+    {
+      "imo": "9169421",
+      "source_article": "March 2024 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9169691",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9171448",
+      "source_article": "October 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/october-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9171450",
+      "source_article": "Iran War Shipping Update\u2014March 23, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-23-2026"
+    },
+    {
+      "imo": "9172038",
+      "source_article": "Iran War Shipping Update - April 2, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9172052",
+      "source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9174220",
+      "source_article": "Inside the Ghost Armada Oil Trade that Led to the Seizure of M SOPHIA and OLINA",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/inside-ghost-armada-oil-trade-led-to-seizure-of-m-sophia-and-olina"
+    },
+    {
+      "imo": "9174397",
+      "source_article": "Summer 2025 Iran Tanker Tracker: June, July, August",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/summer-2025-iran-tanker-tracker-june-july-august"
+    },
+    {
+      "imo": "9179701",
+      "source_article": "February 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/february-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9180164",
+      "source_article": "May 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9180281",
+      "source_article": "January 2023 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2023-iran-tanker-tracking"
+    },
+    {
+      "imo": "9181194",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9182291",
+      "source_article": "January 2023 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2023-iran-tanker-tracking"
+    },
+    {
+      "imo": "9187435",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9187667",
+      "source_article": "August 2021 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/august-2021-iran-tanker-tracking"
+    },
+    {
+      "imo": "9188788",
+      "source_article": "May 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9189110",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9189146",
+      "source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9189952",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9192260",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9193197",
+      "source_article": "Iran War Shipping Update - April 2, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9193721",
+      "source_article": "Iran War Shipping Update\u2014March 24, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-24-2026"
+    },
+    {
+      "imo": "9194127",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9194139",
+      "source_article": "August 2021 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/august-2021-iran-tanker-tracking"
+    },
+    {
+      "imo": "9196644",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9197844",
+      "source_article": "March 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9198094",
+      "source_article": "November 2021 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/november-2021-iran-tanker-tracking"
+    },
+    {
+      "imo": "9198771",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9199828",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9200316",
+      "source_article": "Iran War Shipping Update\u2014March 25, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-25-2026"
+    },
+    {
+      "imo": "9200964",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9201592",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9203253",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9203265",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9203277",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9203784",
+      "source_article": "November 2023 Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/november-2023-tanker-tracker"
+    },
+    {
+      "imo": "9203928",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9203930",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9204805",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9206035",
+      "source_article": "Is COSCO At It Again?",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/cosco-at-it-again"
+    },
+    {
+      "imo": "9208057",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9208215",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9212759",
+      "source_article": "May 2024 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9212864",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9212905",
+      "source_article": "Iran War Shipping Update\u2014March 27, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-27-2026"
+    },
+    {
+      "imo": "9212917",
+      "source_article": "Iran War Shipping Update\u2014March 30, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-30-2026"
+    },
+    {
+      "imo": "9213296",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9213301",
+      "source_article": "UANI Response to Panama Maritime Authority Statement",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/uani-response-to-panama-maritime-authority-statement"
+    },
+    {
+      "imo": "9213387",
+      "source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9216559",
+      "source_article": "UANI Response to Panama Maritime Authority Statement",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/uani-response-to-panama-maritime-authority-statement"
+    },
+    {
+      "imo": "9218181",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9218454",
+      "source_article": "Iran War Shipping Update\u2014March 20, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-20-2026"
+    },
+    {
+      "imo": "9218466",
+      "source_article": "August 2024 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/august-2024-iran-tanker-tracker"
+    },
+    {
+      "imo": "9218478",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9218480",
+      "source_article": "Iran War Shipping Update\u2014March 26, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-26-2026"
+    },
+    {
+      "imo": "9221657",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9221970",
+      "source_article": "March 2024 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9224271",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9224295",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9226968",
+      "source_article": "March 2024 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9229439",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9230878",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9230880",
+      "source_article": "Inside the Ghost Armada Oil Trade that Led to the Seizure of M SOPHIA and OLINA",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/inside-ghost-armada-oil-trade-led-to-seizure-of-m-sophia-and-olina"
+    },
+    {
+      "imo": "9231767",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9232448",
+      "source_article": "September 2024 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/september-2024-iran-tanker-tracker"
+    },
+    {
+      "imo": "9233222",
+      "source_article": "The U.S. Seizure of VERONICA and the Vessel\u2019s History of Transporting Iranian Crude",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/us-seizure-of-veronica-and-vessels-history-of-transporting-iranian-crude"
+    },
+    {
+      "imo": "9233272",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9233650",
+      "source_article": "March 2024 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9234666",
+      "source_article": "March 2024 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9235244",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9236250",
+      "source_article": "February 2024 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/february-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9236353",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9237307",
+      "source_article": "January 2024 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9237539",
+      "source_article": "Iran War Shipping Update\u2014March 16, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-16-2026"
+    },
+    {
+      "imo": "9237632",
+      "source_article": "January 2025: Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2025-iran-tanker-tracker"
+    },
+    {
+      "imo": "9238868",
+      "source_article": "Summer 2025 Iran Tanker Tracker: June, July, August",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/summer-2025-iran-tanker-tracker-june-july-august"
+    },
+    {
+      "imo": "9240512",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9240885",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9242118",
+      "source_article": "March 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9242120",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9244623",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9244635",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9246138",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9246279",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9246633",
+      "source_article": "March 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9247077",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9247431",
+      "source_article": "February 2024 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/february-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9247986",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9250907",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9251602",
+      "source_article": "October 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/october-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9254082",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9254915",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9255880",
+      "source_article": "February 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/february-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9255933",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9255945",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9256016",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9256468",
+      "source_article": "January 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9256858",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9256860",
+      "source_article": "The U.S. Seizure of VERONICA and the Vessel\u2019s History of Transporting Iranian Crude",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/us-seizure-of-veronica-and-vessels-history-of-transporting-iranian-crude"
+    },
+    {
+      "imo": "9257503",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9258014",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9258521",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9259197",
+      "source_article": "Inside the Ghost Armada Oil Trade that Led to the Seizure of M SOPHIA and OLINA",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/inside-ghost-armada-oil-trade-led-to-seizure-of-m-sophia-and-olina"
+    },
+    {
+      "imo": "9259745",
+      "source_article": "September 2024 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/september-2024-iran-tanker-tracker"
+    },
+    {
+      "imo": "9260366",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9262156",
+      "source_article": "March 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9262168",
+      "source_article": "March 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9263215",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9264881",
+      "source_article": "Summer 2025 Iran Tanker Tracker: June, July, August",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/summer-2025-iran-tanker-tracker-june-july-august"
+    },
+    {
+      "imo": "9264893",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9265744",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9267132",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9268112",
+      "source_article": "June 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9273052",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9273337",
+      "source_article": "October 2021 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/october-2021-iran-tanker-tracking"
+    },
+    {
+      "imo": "9276585",
+      "source_article": "January 2025: Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2025-iran-tanker-tracker"
+    },
+    {
+      "imo": "9280873",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9281891",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9282106",
+      "source_article": "Summer 2025 Iran Tanker Tracker: June, July, August",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/summer-2025-iran-tanker-tracker-june-july-august"
+    },
+    {
+      "imo": "9282443",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9282479",
+      "source_article": "Inside the Ghost Armada Oil Trade that Led to the Seizure of M SOPHIA and OLINA",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/inside-ghost-armada-oil-trade-led-to-seizure-of-m-sophia-and-olina"
+    },
+    {
+      "imo": "9282792",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9283007",
+      "source_article": "Iran War Shipping Update - April 2, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9283746",
+      "source_article": "Hezbollah Imports Iranian Fuel for Lebanon",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/hezbollah-imports-iranian-fuel-for-lebanon"
+    },
+    {
+      "imo": "9283758",
+      "source_article": "Hezbollah Imports Iranian Fuel for Lebanon",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/hezbollah-imports-iranian-fuel-for-lebanon"
+    },
+    {
+      "imo": "9283760",
+      "source_article": "Hezbollah Imports Iranian Fuel for Lebanon",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/hezbollah-imports-iranian-fuel-for-lebanon"
+    },
+    {
+      "imo": "9283801",
+      "source_article": "May 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9286229",
+      "source_article": "October 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/october-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9288277",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9289477",
+      "source_article": "Inside the Ghost Armada Oil Trade that Led to the Seizure of M SOPHIA and OLINA",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/inside-ghost-armada-oil-trade-led-to-seizure-of-m-sophia-and-olina"
+    },
+    {
+      "imo": "9289491",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9289726",
+      "source_article": "January 2025: Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2025-iran-tanker-tracker"
+    },
+    {
+      "imo": "9292486",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9293741",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9294795",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9299563",
+      "source_article": "Iran War Shipping Update\u2014March 20, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-20-2026"
+    },
+    {
+      "imo": "9304655",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9304667",
+      "source_article": "February 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/february-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9308778",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9310147",
+      "source_article": "Inside the Ghost Armada Oil Trade that Led to the Seizure of M SOPHIA and OLINA",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/inside-ghost-armada-oil-trade-led-to-seizure-of-m-sophia-and-olina"
+    },
+    {
+      "imo": "9310159",
+      "source_article": "May 2026 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2026-iran-tanker-tracker"
+    },
+    {
+      "imo": "9315446",
+      "source_article": "March 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9316701",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9328716",
+      "source_article": "May 2026 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2026-iran-tanker-tracker"
+    },
+    {
+      "imo": "9328900",
+      "source_article": "Iran War Shipping Update\u2014March 30, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-30-2026"
+    },
+    {
+      "imo": "9341512",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9346548",
+      "source_article": "Iran War Shipping Update - April 2, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9349590",
+      "source_article": "Iran War Shipping Update - April 2, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9350422",
+      "source_article": "Iran War Shipping Update\u2014March 25, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-25-2026"
+    },
+    {
+      "imo": "9350862",
+      "source_article": "Iran War Shipping Update - April 2, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9357183",
+      "source_article": "May 2026 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2026-iran-tanker-tracker"
+    },
+    {
+      "imo": "9357365",
+      "source_article": "Iran War Shipping Update\u2014March 24, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-24-2026"
+    },
+    {
+      "imo": "9357406",
+      "source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9357717",
+      "source_article": "Iran War Shipping Update\u2014March 31, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-31-2026"
+    },
+    {
+      "imo": "9357729",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9362059",
+      "source_article": "Iran War Shipping Update\u2014March 30, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-30-2026"
+    },
+    {
+      "imo": "9364112",
+      "source_article": "May 2026 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2026-iran-tanker-tracker"
+    },
+    {
+      "imo": "9365764",
+      "source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9369722",
+      "source_article": "Iran War Shipping Update - April 2, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9371608",
+      "source_article": "May 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9379703",
+      "source_article": "April 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/april-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9387786",
+      "source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9387798",
+      "source_article": "Iran War Shipping Update - April 2, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9402469",
+      "source_article": "May 2026 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2026-iran-tanker-tracker"
+    },
+    {
+      "imo": "9405954",
+      "source_article": "Iran War Shipping Update - April 2, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9405978",
+      "source_article": "Iran War Shipping Update\u2014March 27, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-27-2026"
+    },
+    {
+      "imo": "9465849",
+      "source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9465851",
+      "source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9468671",
+      "source_article": "May 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9513139",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9524475",
+      "source_article": "January 2023 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2023-iran-tanker-tracking"
+    },
+    {
+      "imo": "9569619",
+      "source_article": "April 2023 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/april-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9569621",
+      "source_article": "Iran War Shipping Update\u2014March 20, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-20-2026"
+    },
+    {
+      "imo": "9569645",
+      "source_article": "January 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9569669",
+      "source_article": "July 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9569671",
+      "source_article": "September 2021 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/september-2021-iran-tanker-tracking"
+    },
+    {
+      "imo": "9569683",
+      "source_article": "Iran War Shipping Update\u2014March 18, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-18-2026"
+    },
+    {
+      "imo": "9569695",
+      "source_article": "Iran War Shipping Update\u2014March 26, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-26-2026"
+    },
+    {
+      "imo": "9569700",
+      "source_article": "May 2026 Iran Tanker Tracker",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2026-iran-tanker-tracker"
+    },
+    {
+      "imo": "9582726",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9593517",
+      "source_article": "Iran War Shipping Update\u2014March 18, 2026",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-18-2026"
+    },
+    {
+      "imo": "9637650",
+      "source_article": "Stop the Hop",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9753545",
+      "source_article": "May 2022 Iran Tanker Tracking",
+      "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2022-iran-tanker-tracking"
+    }
+  ],
+  "matches": [
+    {
+      "imo": "8818219",
+      "currently_broadcasting_as": "DISHA",
+      "flag": "MOZ",
+      "gfw_vessel_type": "NA",
+      "presence_hours_in_window": 32,
+      "presence_days_in_window": 2,
+      "mmsi": "650610088",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "8912546",
+      "currently_broadcasting_as": "SALUTE",
+      "flag": "MDG",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 388,
+      "presence_days_in_window": 19,
+      "mmsi": "647553028",
+      "uani_source_article": "Iran War Shipping Update\u2014March 26, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-26-2026"
+    },
+    {
+      "imo": "9002491",
+      "currently_broadcasting_as": "PYRA",
+      "flag": "MOZ",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 404,
+      "presence_days_in_window": 24,
+      "mmsi": "650000169",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9014456",
+      "currently_broadcasting_as": "EXONAVE",
+      "flag": "MDG",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 219,
+      "presence_days_in_window": 11,
+      "mmsi": "647553066",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9041655",
+      "currently_broadcasting_as": "ZIRAN",
+      "flag": "COM",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 202,
+      "presence_days_in_window": 13,
+      "mmsi": "620800045",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9046784",
+      "currently_broadcasting_as": "BANIAN",
+      "flag": "AGO",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 176,
+      "presence_days_in_window": 11,
+      "mmsi": "603919000",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9052331",
+      "currently_broadcasting_as": "XAVIA",
+      "flag": "GIN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 114,
+      "presence_days_in_window": 5,
+      "mmsi": "632001092",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9102198",
+      "currently_broadcasting_as": "CLIFTON",
+      "flag": "NIC",
+      "gfw_vessel_type": "NA",
+      "presence_hours_in_window": 390,
+      "presence_days_in_window": 18,
+      "mmsi": "350220000",
+      "uani_source_article": "February 2023 Iran Tanker Tracker",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/february-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9102241",
+      "currently_broadcasting_as": "MT. SHELIF",
+      "flag": "GUY",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 409,
+      "presence_days_in_window": 18,
+      "mmsi": "750907000",
+      "uani_source_article": "October 2023 Iran Tanker Tracker",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/october-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9133070",
+      "currently_broadcasting_as": "FLORA",
+      "flag": "MHL",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 150,
+      "presence_days_in_window": 8,
+      "mmsi": "538006405",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9143506",
+      "currently_broadcasting_as": "G SUMMER",
+      "flag": "AGO",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 151,
+      "presence_days_in_window": 9,
+      "mmsi": "603896000",
+      "uani_source_article": "December 2022 Iran Tanker Tracking and Year Review",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2022-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9162916",
+      "currently_broadcasting_as": "SETTEBELLO",
+      "flag": "PLW",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 17,
+      "presence_days_in_window": 2,
+      "mmsi": "511101923",
+      "uani_source_article": "July 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9162928",
+      "currently_broadcasting_as": "NOBLE",
+      "flag": "GIN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 365,
+      "presence_days_in_window": 19,
+      "mmsi": "632001088",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9165542",
+      "currently_broadcasting_as": "ZEBRA",
+      "flag": "COM",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 363,
+      "presence_days_in_window": 19,
+      "mmsi": "620800271",
+      "uani_source_article": "March 2023 Iran Tanker Tracker",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9172038",
+      "currently_broadcasting_as": "SINOPA",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 50,
+      "presence_days_in_window": 3,
+      "mmsi": "422153000",
+      "uani_source_article": "Iran War Shipping Update - April 2, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9172052",
+      "currently_broadcasting_as": "SILVIA  1",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 9,
+      "presence_days_in_window": 2,
+      "mmsi": "422173000",
+      "uani_source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9180281",
+      "currently_broadcasting_as": "HUMANITY",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 52,
+      "presence_days_in_window": 4,
+      "mmsi": "422204700",
+      "uani_source_article": "January 2023 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2023-iran-tanker-tracking"
+    },
+    {
+      "imo": "9181194",
+      "currently_broadcasting_as": "FELIX",
+      "flag": "GMB",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 35,
+      "presence_days_in_window": 2,
+      "mmsi": "629009370",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9189146",
+      "currently_broadcasting_as": "NOXEN",
+      "flag": "COM",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 187,
+      "presence_days_in_window": 8,
+      "mmsi": "620800028",
+      "uani_source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9193721",
+      "currently_broadcasting_as": "NAUTILUS I",
+      "flag": "AGO",
+      "gfw_vessel_type": "NA",
+      "presence_hours_in_window": 152,
+      "presence_days_in_window": 7,
+      "mmsi": "603925000",
+      "uani_source_article": "Iran War Shipping Update\u2014March 24, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-24-2026"
+    },
+    {
+      "imo": "9196644",
+      "currently_broadcasting_as": "ELVA",
+      "flag": "GMB",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 76,
+      "presence_days_in_window": 4,
+      "mmsi": "629009392",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9197844",
+      "currently_broadcasting_as": "HORNET",
+      "flag": "BEN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 129,
+      "presence_days_in_window": 8,
+      "mmsi": "610107156",
+      "uani_source_article": "March 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9198094",
+      "currently_broadcasting_as": "ALA",
+      "flag": "GUY",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 406,
+      "presence_days_in_window": 23,
+      "mmsi": "750931000",
+      "uani_source_article": "November 2021 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/november-2021-iran-tanker-tracking"
+    },
+    {
+      "imo": "9203265",
+      "currently_broadcasting_as": "VORAS",
+      "flag": "BWA",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 319,
+      "presence_days_in_window": 16,
+      "mmsi": "611000248",
+      "uani_source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9203784",
+      "currently_broadcasting_as": "ADITYA",
+      "flag": "GUY",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 660,
+      "presence_days_in_window": 28,
+      "mmsi": "750094000",
+      "uani_source_article": "November 2023 Tanker Tracker",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/november-2023-tanker-tracker"
+    },
+    {
+      "imo": "9212905",
+      "currently_broadcasting_as": "HAPPINESS I",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 21,
+      "presence_days_in_window": 2,
+      "mmsi": "422220000",
+      "uani_source_article": "Iran War Shipping Update\u2014March 27, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-27-2026"
+    },
+    {
+      "imo": "9213387",
+      "currently_broadcasting_as": "MAHNAM",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 370,
+      "presence_days_in_window": 18,
+      "mmsi": "422036600",
+      "uani_source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9218478",
+      "currently_broadcasting_as": "DIAMOND II",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 10,
+      "presence_days_in_window": 2,
+      "mmsi": "422231000",
+      "uani_source_article": "July 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9218480",
+      "currently_broadcasting_as": "DOWNY",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 93,
+      "presence_days_in_window": 5,
+      "mmsi": "422232000",
+      "uani_source_article": "Iran War Shipping Update\u2014March 26, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-26-2026"
+    },
+    {
+      "imo": "9221970",
+      "currently_broadcasting_as": "SOBAR",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 313,
+      "presence_days_in_window": 15,
+      "mmsi": "422160500",
+      "uani_source_article": "March 2024 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9224271",
+      "currently_broadcasting_as": "NICHOLA",
+      "flag": "GUY",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 148,
+      "presence_days_in_window": 9,
+      "mmsi": "750307000",
+      "uani_source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9226968",
+      "currently_broadcasting_as": "SARAK",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 379,
+      "presence_days_in_window": 17,
+      "mmsi": "422160400",
+      "uani_source_article": "March 2024 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9236250",
+      "currently_broadcasting_as": "MT VIRGO",
+      "flag": "BWA",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 64,
+      "presence_days_in_window": 4,
+      "mmsi": "611000208",
+      "uani_source_article": "February 2024 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/february-2024-iran-tanker-tracking"
+    },
+    {
+      "imo": "9240512",
+      "currently_broadcasting_as": "GRETA",
+      "flag": "",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 284,
+      "presence_days_in_window": 12,
+      "mmsi": "987109000",
+      "uani_source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9240885",
+      "currently_broadcasting_as": "WOLF",
+      "flag": "MWI",
+      "gfw_vessel_type": "NA",
+      "presence_hours_in_window": 307,
+      "presence_days_in_window": 19,
+      "mmsi": "655371000",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9244635",
+      "currently_broadcasting_as": "AMAK",
+      "flag": "MDG",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 126,
+      "presence_days_in_window": 8,
+      "mmsi": "647553039",
+      "uani_source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9247986",
+      "currently_broadcasting_as": "AVA 10",
+      "flag": "COM",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 569,
+      "presence_days_in_window": 27,
+      "mmsi": "620999909",
+      "uani_source_article": "July 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9254082",
+      "currently_broadcasting_as": "LIMAS",
+      "flag": "GUY",
+      "gfw_vessel_type": "NA",
+      "presence_hours_in_window": 188,
+      "presence_days_in_window": 8,
+      "mmsi": "750117000",
+      "uani_source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9257503",
+      "currently_broadcasting_as": "ATLANTIS II",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 97,
+      "presence_days_in_window": 9,
+      "mmsi": "422859600",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9258521",
+      "currently_broadcasting_as": "LAUREN II",
+      "flag": "",
+      "gfw_vessel_type": "NA",
+      "presence_hours_in_window": 54,
+      "presence_days_in_window": 4,
+      "mmsi": "550167028",
+      "uani_source_article": "July 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9262156",
+      "currently_broadcasting_as": "VIGOR",
+      "flag": "BWA",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 15,
+      "presence_days_in_window": 2,
+      "mmsi": "611000253",
+      "uani_source_article": "March 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9262168",
+      "currently_broadcasting_as": "BERG 1",
+      "flag": "BEN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 81,
+      "presence_days_in_window": 5,
+      "mmsi": "610107205",
+      "uani_source_article": "March 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9268112",
+      "currently_broadcasting_as": "ALBA",
+      "flag": "MOZ",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 58,
+      "presence_days_in_window": 4,
+      "mmsi": "650000125",
+      "uani_source_article": "June 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/june-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9273052",
+      "currently_broadcasting_as": "SOUFIA 1",
+      "flag": "MOZ",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 666,
+      "presence_days_in_window": 28,
+      "mmsi": "650000177",
+      "uani_source_article": "July 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9283007",
+      "currently_broadcasting_as": "ARTABAZ",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 279,
+      "presence_days_in_window": 14,
+      "mmsi": "422039100",
+      "uani_source_article": "Iran War Shipping Update - April 2, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9286229",
+      "currently_broadcasting_as": "RIEVERIA I",
+      "flag": "SMR",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 672,
+      "presence_days_in_window": 28,
+      "mmsi": "268245201",
+      "uani_source_article": "October 2023 Iran Tanker Tracker",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/october-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9289491",
+      "currently_broadcasting_as": "BELMA",
+      "flag": "BES",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 201,
+      "presence_days_in_window": 9,
+      "mmsi": "306269000",
+      "uani_source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9299563",
+      "currently_broadcasting_as": "NEW STAR",
+      "flag": "MOZ",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 251,
+      "presence_days_in_window": 13,
+      "mmsi": "650001221",
+      "uani_source_article": "Iran War Shipping Update\u2014March 20, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-20-2026"
+    },
+    {
+      "imo": "9304655",
+      "currently_broadcasting_as": "VERA",
+      "flag": "BES",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 69,
+      "presence_days_in_window": 3,
+      "mmsi": "306267000",
+      "uani_source_article": "December 2023 Iran Tanker Tracking and Year Review",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
+    },
+    {
+      "imo": "9328900",
+      "currently_broadcasting_as": "TOUSKA",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 402,
+      "presence_days_in_window": 18,
+      "mmsi": "422032600",
+      "uani_source_article": "Iran War Shipping Update\u2014March 30, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-30-2026"
+    },
+    {
+      "imo": "9341512",
+      "currently_broadcasting_as": "MT ELCANO",
+      "flag": "GUY",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 64,
+      "presence_days_in_window": 9,
+      "mmsi": "750804000",
+      "uani_source_article": "Stop the Hop",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
+    },
+    {
+      "imo": "9346548",
+      "currently_broadcasting_as": "BEHNAVAZ",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 96,
+      "presence_days_in_window": 5,
+      "mmsi": "422032200",
+      "uani_source_article": "Iran War Shipping Update - April 2, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9350422",
+      "currently_broadcasting_as": "ASTRA",
+      "flag": "MOZ",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 224,
+      "presence_days_in_window": 10,
+      "mmsi": "650000174",
+      "uani_source_article": "Iran War Shipping Update\u2014March 25, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-25-2026"
+    },
+    {
+      "imo": "9350862",
+      "currently_broadcasting_as": "DEEPBLUE",
+      "flag": "PAN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 293,
+      "presence_days_in_window": 16,
+      "mmsi": "352005665",
+      "uani_source_article": "Iran War Shipping Update - April 2, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9357365",
+      "currently_broadcasting_as": "SONIA1",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 13,
+      "presence_days_in_window": 2,
+      "mmsi": "422201500",
+      "uani_source_article": "Iran War Shipping Update\u2014March 24, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-24-2026"
+    },
+    {
+      "imo": "9357406",
+      "currently_broadcasting_as": "AMBER",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 18,
+      "presence_days_in_window": 2,
+      "mmsi": "422215900",
+      "uani_source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9357717",
+      "currently_broadcasting_as": "DORE",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 16,
+      "presence_days_in_window": 2,
+      "mmsi": "422208400",
+      "uani_source_article": "Iran War Shipping Update\u2014March 31, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-31-2026"
+    },
+    {
+      "imo": "9357729",
+      "currently_broadcasting_as": "DAN",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 29,
+      "presence_days_in_window": 3,
+      "mmsi": "422204600",
+      "uani_source_article": "July 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9362059",
+      "currently_broadcasting_as": "HERBY",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 25,
+      "presence_days_in_window": 3,
+      "mmsi": "422209500",
+      "uani_source_article": "Iran War Shipping Update\u2014March 30, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-30-2026"
+    },
+    {
+      "imo": "9364112",
+      "currently_broadcasting_as": "KARIZ",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 72,
+      "presence_days_in_window": 4,
+      "mmsi": "422038400",
+      "uani_source_article": "May 2026 Iran Tanker Tracker",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2026-iran-tanker-tracker"
+    },
+    {
+      "imo": "9369722",
+      "currently_broadcasting_as": "ARIES",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 372,
+      "presence_days_in_window": 20,
+      "mmsi": "422035400",
+      "uani_source_article": "Iran War Shipping Update - April 2, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9387786",
+      "currently_broadcasting_as": "PARSHAD",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 217,
+      "presence_days_in_window": 13,
+      "mmsi": "422040200",
+      "uani_source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9387798",
+      "currently_broadcasting_as": "BAVAND",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 300,
+      "presence_days_in_window": 14,
+      "mmsi": "422036700",
+      "uani_source_article": "Iran War Shipping Update - April 2, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-2-2026"
+    },
+    {
+      "imo": "9405978",
+      "currently_broadcasting_as": "BEHDOKHT",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 187,
+      "presence_days_in_window": 10,
+      "mmsi": "422041300",
+      "uani_source_article": "Iran War Shipping Update\u2014March 27, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-27-2026"
+    },
+    {
+      "imo": "9465849",
+      "currently_broadcasting_as": "WARTA",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 66,
+      "presence_days_in_window": 4,
+      "mmsi": "422040300",
+      "uani_source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9465851",
+      "currently_broadcasting_as": "PARISAN",
+      "flag": "IRN",
+      "gfw_vessel_type": "CARGO",
+      "presence_hours_in_window": 156,
+      "presence_days_in_window": 11,
+      "mmsi": "422037300",
+      "uani_source_article": "Iran War Shipping Update\u2014April 1, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-april-1-2026"
+    },
+    {
+      "imo": "9524475",
+      "currently_broadcasting_as": "ST. NIKOLAS",
+      "flag": "MHL",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 262,
+      "presence_days_in_window": 15,
+      "mmsi": "538010676",
+      "uani_source_article": "January 2023 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2023-iran-tanker-tracking"
+    },
+    {
+      "imo": "9569619",
+      "currently_broadcasting_as": "SNOW",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 18,
+      "presence_days_in_window": 1,
+      "mmsi": "422210100",
+      "uani_source_article": "April 2023 Iran Tanker Tracker",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/april-2023-iran-tanker-tracker"
+    },
+    {
+      "imo": "9569621",
+      "currently_broadcasting_as": "STARLA",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 29,
+      "presence_days_in_window": 3,
+      "mmsi": "422200400",
+      "uani_source_article": "Iran War Shipping Update\u2014March 20, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-20-2026"
+    },
+    {
+      "imo": "9569645",
+      "currently_broadcasting_as": "SERENA",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 57,
+      "presence_days_in_window": 3,
+      "mmsi": "422215800",
+      "uani_source_article": "January 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9569669",
+      "currently_broadcasting_as": "DORENA",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 15,
+      "presence_days_in_window": 2,
+      "mmsi": "422201300",
+      "uani_source_article": "July 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
+    },
+    {
+      "imo": "9569695",
+      "currently_broadcasting_as": "DIONA",
+      "flag": "IRN",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 7,
+      "presence_days_in_window": 1,
+      "mmsi": "422215700",
+      "uani_source_article": "Iran War Shipping Update\u2014March 26, 2026",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-26-2026"
+    },
+    {
+      "imo": "9753545",
+      "currently_broadcasting_as": "PRUDENT WARRIOR",
+      "flag": "GRC",
+      "gfw_vessel_type": "OTHER",
+      "presence_hours_in_window": 344,
+      "presence_days_in_window": 19,
+      "mmsi": "241485000",
+      "uani_source_article": "May 2022 Iran Tanker Tracking",
+      "uani_source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2022-iran-tanker-tracking"
+    }
+  ]
+}
