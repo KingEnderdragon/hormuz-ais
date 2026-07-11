@@ -3,3 +3,5 @@
 __pycache__/
 .claude/settings.local.json
 gfw_presence_sample.json
+*.log
+index_snapshots/
