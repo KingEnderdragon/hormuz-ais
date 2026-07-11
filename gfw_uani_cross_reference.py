@@ -102,15 +102,20 @@ def dedupe_by_imo(entries):
 
 def extract_uani_imos():
     # Reads uani_imo_mentions, which uani_monitor.py populates from each
-    # post's *full* body_text at scrape time - not body_excerpt, which is
-    # truncated to 1500 chars and can silently miss IMOs mentioned later in
-    # longer articles.
+    # post's *full* body_text at scrape time (not body_excerpt, which is
+    # truncated to 1500 chars) and only after check-digit validation -
+    # candidates that fail validation land in uani_imo_extraction_anomalies
+    # instead, so they're never counted here as checked IMOs.
     conn = sqlite3.connect(HORMUZ_AIS_DB)
     rows = conn.execute("SELECT imo, url, title FROM uani_imo_mentions").fetchall()
     imos = {}
     for imo, url, title in rows:
         imos[imo] = {"title": title, "url": url}
-    return imos
+
+    anomaly_count = conn.execute(
+        "SELECT COUNT(*) FROM uani_imo_extraction_anomalies"
+    ).fetchone()[0]
+    return imos, anomaly_count
 
 
 def main():
@@ -120,8 +125,9 @@ def main():
     print(f"  {len(entries)} records, {len(by_imo)} distinct vessels with IMO")
 
     print("Extracting UANI-mentioned IMOs from hormuz_ais.db...")
-    uani_imos = extract_uani_imos()
-    print(f"  {len(uani_imos)} distinct IMOs mentioned across UANI corpus")
+    uani_imos, anomaly_count = extract_uani_imos()
+    print(f"  {len(uani_imos)} distinct IMOs mentioned across UANI corpus "
+          f"({anomaly_count} candidate(s) rejected for failing IMO check-digit validation)")
 
     matches = []
     for imo in sorted(set(uani_imos) & set(by_imo)):
@@ -158,6 +164,7 @@ def main():
         "fetched_at_utc": datetime.now(timezone.utc).isoformat(),
         "gfw_region_total_records": len(entries),
         "gfw_distinct_vessels_with_imo": len(by_imo),
+        "uani_imo_extraction_anomalies_count": anomaly_count,
         "uani_imos_checked": [
             {"imo": imo, "source_article": info["title"], "source_url": info["url"]}
             for imo, info in sorted(uani_imos.items())

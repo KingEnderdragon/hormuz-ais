@@ -12,9 +12,10 @@
       28.0
     ]
   },
-  "fetched_at_utc": "2026-07-11T05:11:05.654819+00:00",
+  "fetched_at_utc": "2026-07-11T05:20:57.415275+00:00",
   "gfw_region_total_records": 189774,
   "gfw_distinct_vessels_with_imo": 3369,
+  "uani_imo_extraction_anomalies_count": 5,
   "uani_imos_checked": [
     {
       "imo": "7230666",
@@ -295,11 +296,6 @@
       "imo": "9182291",
       "source_article": "January 2023 Iran Tanker Tracking",
       "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2023-iran-tanker-tracking"
-    },
-    {
-      "imo": "9183924",
-      "source_article": "September 2021 Iran Tanker Tracking",
-      "source_url": "https://www.unitedagainstnucleariran.com/analysis/september-2021-iran-tanker-tracking"
     },
     {
       "imo": "9187435",
@@ -627,11 +623,6 @@
       "source_url": "https://www.unitedagainstnucleariran.com/analysis/stop-hop"
     },
     {
-      "imo": "9241512",
-      "source_article": "July 2022 Iran Tanker Tracking",
-      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
-    },
-    {
       "imo": "9242118",
       "source_article": "March 2023 Iran Tanker Tracker",
       "source_url": "https://www.unitedagainstnucleariran.com/analysis/march-2023-iran-tanker-tracker"
@@ -922,11 +913,6 @@
       "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-20-2026"
     },
     {
-      "imo": "9304256",
-      "source_article": "October 2021 Iran Tanker Tracking",
-      "source_url": "https://www.unitedagainstnucleariran.com/analysis/october-2021-iran-tanker-tracking"
-    },
-    {
       "imo": "9304655",
       "source_article": "December 2023 Iran Tanker Tracking and Year Review",
       "source_url": "https://www.unitedagainstnucleariran.com/analysis/december-2023-iran-tanker-tracking-and-year-review"
@@ -1027,11 +1013,6 @@
       "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-30-2026"
     },
     {
-      "imo": "9363866",
-      "source_article": "July 2022 Iran Tanker Tracking",
-      "source_url": "https://www.unitedagainstnucleariran.com/analysis/july-2022-iran-tanker-tracking"
-    },
-    {
       "imo": "9364112",
       "source_article": "May 2026 Iran Tanker Tracker",
       "source_url": "https://www.unitedagainstnucleariran.com/analysis/may-2026-iran-tanker-tracker"
@@ -1105,11 +1086,6 @@
       "imo": "9524475",
       "source_article": "January 2023 Iran Tanker Tracking",
       "source_url": "https://www.unitedagainstnucleariran.com/analysis/january-2023-iran-tanker-tracking"
-    },
-    {
-      "imo": "9569610",
-      "source_article": "Iran War Shipping Update\u2014March 27, 2026",
-      "source_url": "https://www.unitedagainstnucleariran.com/analysis/iran-war-shipping-update-march-27-2026"
     },
     {
       "imo": "9569619",
