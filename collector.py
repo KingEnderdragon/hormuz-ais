@@ -13,8 +13,11 @@ API_KEY = os.environ["AISSTREAM_API_KEY"]
 WS_URL = "wss://stream.aisstream.io/v0/stream"
 DB_PATH = os.path.join(os.path.dirname(__file__), "hormuz_ais.db")
 
-# Strait of Hormuz + Fujairah/Khasab anchorage approaches
-BOUNDING_BOXES = [[[25.0, 55.0], [27.0, 57.5]]]
+# Matches straits.live's own documented "AIS-dark filter zone" (24-28N, 55-58E,
+# per straits.live/methodology) rather than an ad-hoc box, so our collector and
+# straits.live's live-presence feed are comparable over the same geography -
+# see GitHub issue #6 section 2 ("Live AIS comparison").
+BOUNDING_BOXES = [[[24.0, 55.0], [28.0, 58.0]]]
 
 TANKER_TYPE_MIN, TANKER_TYPE_MAX = 80, 89
 
