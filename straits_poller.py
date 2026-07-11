@@ -95,6 +95,20 @@ def ensure_csv():
     if not os.path.exists(CSV_PATH):
         with open(CSV_PATH, "w", newline="", encoding="utf-8") as f:
             csv.DictWriter(f, fieldnames=CSV_FIELDS).writeheader()
+        return
+
+    with open(CSV_PATH, newline="", encoding="utf-8") as f:
+        existing_header = next(csv.reader(f), [])
+    if existing_header != CSV_FIELDS:
+        raise RuntimeError(
+            f"{CSV_PATH} header does not match current CSV_FIELDS - refusing to "
+            f"append, since that would silently misalign columns (this is exactly "
+            f"what corrupted the sample previously: rows written under an older "
+            f"CSV_FIELDS got appended to a file with a newer header).\n"
+            f"existing header: {existing_header}\n"
+            f"current CSV_FIELDS: {CSV_FIELDS}\n"
+            f"Migrate or regenerate the file before running the poller again."
+        )
 
 
 def run():
@@ -104,6 +118,10 @@ def run():
         try:
             data = fetch_status()
             row = parse_row(data)
+            assert set(row.keys()) == set(CSV_FIELDS), (
+                f"parse_row() output doesn't match CSV_FIELDS: "
+                f"{set(row.keys()) ^ set(CSV_FIELDS)}"
+            )
             with open(CSV_PATH, "a", newline="", encoding="utf-8") as f:
                 csv.DictWriter(f, fieldnames=CSV_FIELDS).writerow(row)
             tag = f"[!! DARKENING {row['darkening_alert']} !!]" if row['darkening_alert'] in ("ELEVATED", "HIGH") else ""
