@@ -69,6 +69,34 @@ def test_documented_weights_match():
     check("escalationProbability weights match documented methodology", r["ok"])
 
 
+def test_documented_weights_defer_to_redistribution_when_stale():
+    import copy
+    data = copy.deepcopy(FIXTURE)
+    cp = data["indices"]["crisisPressure"]
+    components = cp["components"]
+    stale_name = "brentOptionsDread"
+    components[stale_name]["health"] = "stale"
+    components[stale_name]["weight"] = 0.0
+    components[stale_name]["contribution"] = 0.0
+
+    fresh_names = [name for name in ir.CRISIS_PRESSURE_WEIGHTS if name != stale_name]
+    fresh_total = sum(ir.CRISIS_PRESSURE_WEIGHTS[name] for name in fresh_names)
+    for name in fresh_names:
+        weight = ir.CRISIS_PRESSURE_WEIGHTS[name] / fresh_total
+        components[name]["weight"] = weight
+        components[name]["contribution"] = components[name]["score"] * weight
+    cp["reconciliation"]["rawComposite"] = sum(
+        component["score"] * component["weight"] for component in components.values()
+    )
+
+    checks = ir.validate_crisis_pressure(data)
+    nominal = next(item for item in checks if item["check"] == "documented_weights")
+    redistribution = next(item for item in checks if item["check"] == "missing_data_redistribution")
+    check("nominal weight check is advisory during legitimate redistribution", nominal["ok"] is None)
+    check("health-based redistribution remains authoritative and passes", redistribution["ok"])
+    check("correct stale-component redistribution produces no hard failures", not ir.hard_failures(checks))
+
+
 def test_band_boundaries():
     check("87 -> extreme", ir.band_for(87) == "extreme")
     check("61 -> high", ir.band_for(61) == "high")
@@ -142,6 +170,7 @@ def test_csv_row_fields_complete():
 if __name__ == "__main__":
     test_weighted_sum()
     test_documented_weights_match()
+    test_documented_weights_defer_to_redistribution_when_stale()
     test_band_boundaries()
     test_override_floor_holds()
     test_missing_data_redistribution_noop_when_all_fresh()

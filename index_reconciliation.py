@@ -128,6 +128,29 @@ def verify_weighted_sum(components, reported_raw_composite, tol=WEIGHT_SUM_TOLER
 
 
 def verify_documented_weights(components, expected_weights, tol=1e-6):
+    missing = sorted(name for name in expected_weights if name not in components)
+    if missing:
+        return {
+            "check": "documented_weights",
+            "missing_components": missing,
+            "mismatches": {},
+            "ok": False,
+        }
+
+    nonfresh = sorted(
+        name for name in expected_weights
+        if components[name].get("health") != "fresh"
+    )
+    if nonfresh:
+        return {
+            "check": "documented_weights",
+            "missing_components": [],
+            "nonfresh_components": nonfresh,
+            "mismatches": {},
+            "ok": None,
+            "note": "nominal weights do not apply while health-based redistribution is active",
+        }
+
     mismatches = {}
     for name, expected_w in expected_weights.items():
         actual_w = components.get(name, {}).get("weight")
@@ -135,6 +158,8 @@ def verify_documented_weights(components, expected_weights, tol=1e-6):
             mismatches[name] = {"expected": expected_w, "actual": actual_w}
     return {
         "check": "documented_weights",
+        "missing_components": [],
+        "nonfresh_components": [],
         "mismatches": mismatches,
         "ok": not mismatches,
     }

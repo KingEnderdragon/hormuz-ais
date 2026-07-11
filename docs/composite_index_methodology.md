@@ -40,7 +40,9 @@ rule triggers.
 its weight is redistributed pro-rata across the remaining fresh components.
 Example given by straits.live: CBOE OVX dropout → remaining three inputs
 scale from 30/25/25 to ≈37/31/31. Verified in
-`verify_missing_data_redistribution`.
+`verify_missing_data_redistribution`. The nominal documented-weight check
+applies only while all components are fresh; during redistribution it becomes
+advisory so the two checks cannot impose contradictory hard requirements.
 
 ## Escalation Probability ("what markets price for a bad outcome in 30 days")
 
