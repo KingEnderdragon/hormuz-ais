@@ -1,16 +1,82 @@
 {
-  "method": "Cross-reference of GFW public-global-presence 30-day vessel positions in Hormuz/Gulf of Oman/western-gate box (54-62E, 22-28N) against IMO numbers mentioned in scraped UANI Iran Tanker Tracker articles.",
-  "gfw_region_total_records_30d": 181611,
-  "gfw_distinct_vessels_30d": 3326,
-  "uani_distinct_imos_mentioned": 13,
+  "method": "Cross-reference by IMO of Global Fishing Watch's public-global-presence dataset (hourly-sampled, gridded AIS-derived vessel presence - NOT raw continuous per-message positions; GFW's own docs describe it as one position per hour per vessel) against IMO numbers mentioned in the scraped UANI Iran Tanker Tracker corpus. IMO is used as the join key because it's a stable identifier independent of GFW's sampling/gridding resolution, unlike raw lat/lon or MMSI (which can be reassigned/spoofed).",
+  "gfw_query": {
+    "dataset": "public-global-presence:latest",
+    "spatial_resolution": "LOW",
+    "temporal_resolution": "DAILY",
+    "date_range": "2026-06-10,2026-07-09",
+    "bbox_lon_lat": [
+      54.0,
+      22.0,
+      62.0,
+      28.0
+    ]
+  },
+  "fetched_at_utc": "2026-07-11T04:58:12.551104+00:00",
+  "gfw_region_total_records": 181611,
+  "gfw_distinct_vessels_with_imo": 3326,
+  "uani_imos_checked": [
+    {
+      "imo": "9133587",
+      "source_article": "May 2023 Iran Tanker Tracker"
+    },
+    {
+      "imo": "9194139",
+      "source_article": "August 2021 Iran Tanker Tracking"
+    },
+    {
+      "imo": "9198771",
+      "source_article": "June 2022 Iran Tanker Tracking"
+    },
+    {
+      "imo": "9204805",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review"
+    },
+    {
+      "imo": "9232448",
+      "source_article": "September 2024 Iran Tanker Tracker"
+    },
+    {
+      "imo": "9237307",
+      "source_article": "January 2024 Iran Tanker Tracking"
+    },
+    {
+      "imo": "9256860",
+      "source_article": "The U.S. Seizure of VERONICA and the Vessel\u2019s History of Transporting Iranian Crude"
+    },
+    {
+      "imo": "9259745",
+      "source_article": "September 2024 Iran Tanker Tracker"
+    },
+    {
+      "imo": "9282479",
+      "source_article": "Inside the Ghost Armada Oil Trade that Led to the Seizure of M SOPHIA and OLINA"
+    },
+    {
+      "imo": "9289477",
+      "source_article": "Inside the Ghost Armada Oil Trade that Led to the Seizure of M SOPHIA and OLINA"
+    },
+    {
+      "imo": "9294795",
+      "source_article": "December 2022 Iran Tanker Tracking and Year Review"
+    },
+    {
+      "imo": "9524475",
+      "source_article": "February 2022 Iran Tanker Tracking"
+    },
+    {
+      "imo": "9593517",
+      "source_article": "Iran War Shipping Update\u2014March 18, 2026"
+    }
+  ],
   "matches": [
     {
       "imo": "9524475",
       "currently_broadcasting_as": "ST. NIKOLAS",
       "flag": "MHL",
       "gfw_vessel_type": "OTHER",
-      "presence_hours_last_30d": 262,
-      "presence_days_last_30d": 15,
+      "presence_hours_in_window": 262,
+      "presence_days_in_window": 15,
       "mmsi": "538010676",
       "uani_source_article": "February 2022 Iran Tanker Tracking"
     }
