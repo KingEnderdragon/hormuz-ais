@@ -24,7 +24,6 @@ is ~100MB and regenerable on demand).
 """
 import json
 import os
-import re
 import sqlite3
 import urllib.request
 from collections import defaultdict
@@ -36,7 +35,7 @@ load_dotenv()
 
 GFW_TOKEN = os.environ["GFW_API_KEY"]
 GFW_BASE_URL = "https://gateway.api.globalfishingwatch.org/v3/4wings/report"
-GFW_DATASET = "public-global-presence:latest"
+GFW_DATASET = "public-global-presence:v4.0"  # pinned, not "latest" - see fetch_gfw_presence()
 GFW_SPATIAL_RESOLUTION = "LOW"  # 10th-degree grid cells (~11km) - not raw positions
 GFW_TEMPORAL_RESOLUTION = "DAILY"
 GFW_DATE_RANGE = "2026-06-10,2026-07-09"  # 30-day window used for the committed result
@@ -77,7 +76,11 @@ def fetch_gfw_presence():
     req = urllib.request.Request(url, data=body, method="POST", headers=HEADERS)
     with urllib.request.urlopen(req, timeout=60) as r:
         resp = json.loads(r.read().decode("utf-8", errors="ignore"))
-    return resp["entries"][0][f"{GFW_DATASET.split(':')[0]}:v4.0"]
+    # Pinning GFW_DATASET (rather than requesting ":latest") means the response
+    # key matches it exactly - verified live rather than assumed. A future GFW
+    # version bump can't silently change results out from under this script;
+    # it'll instead fail loudly here with a KeyError, which is what we want.
+    return resp["entries"][0][GFW_DATASET]
 
 
 def dedupe_by_imo(entries):
@@ -98,13 +101,15 @@ def dedupe_by_imo(entries):
 
 
 def extract_uani_imos():
+    # Reads uani_imo_mentions, which uani_monitor.py populates from each
+    # post's *full* body_text at scrape time - not body_excerpt, which is
+    # truncated to 1500 chars and can silently miss IMOs mentioned later in
+    # longer articles.
     conn = sqlite3.connect(HORMUZ_AIS_DB)
-    rows = conn.execute("SELECT title, body_excerpt FROM uani_posts").fetchall()
+    rows = conn.execute("SELECT imo, url, title FROM uani_imo_mentions").fetchall()
     imos = {}
-    for title, body in rows:
-        text = (title or "") + " " + (body or "")
-        for m in re.finditer(r"IMO:?\s*(\d{7})", text):
-            imos[m.group(1)] = title
+    for imo, url, title in rows:
+        imos[imo] = {"title": title, "url": url}
     return imos
 
 
@@ -129,7 +134,8 @@ def main():
             "presence_hours_in_window": round(d["hours"], 1),
             "presence_days_in_window": len(d["dates"]),
             "mmsi": d["mmsi"],
-            "uani_source_article": uani_imos[imo],
+            "uani_source_article": uani_imos[imo]["title"],
+            "uani_source_url": uani_imos[imo]["url"],
         })
 
     summary = {
@@ -153,7 +159,8 @@ def main():
         "gfw_region_total_records": len(entries),
         "gfw_distinct_vessels_with_imo": len(by_imo),
         "uani_imos_checked": [
-            {"imo": imo, "source_article": title} for imo, title in sorted(uani_imos.items())
+            {"imo": imo, "source_article": info["title"], "source_url": info["url"]}
+            for imo, info in sorted(uani_imos.items())
         ],
         "matches": matches,
     }

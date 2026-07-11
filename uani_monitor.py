@@ -42,8 +42,23 @@ def init_db():
             first_seen TEXT
         )
     """)
+    # Extracted from full body_text at scrape time, before it's truncated to
+    # body_excerpt - body_excerpt is capped at 1500 chars for display/storage
+    # size, which silently misses IMOs mentioned later in longer articles.
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS uani_imo_mentions (
+            imo TEXT,
+            url TEXT,
+            title TEXT,
+            first_seen TEXT,
+            PRIMARY KEY (imo, url)
+        )
+    """)
     conn.commit()
     return conn
+
+
+IMO_RE = re.compile(r"IMO:?\s*(\d{7})")
 
 
 def classify_severity(text):
@@ -83,6 +98,15 @@ def process_post(conn, path):
         INSERT OR IGNORE INTO uani_posts (url, title, category, severity, body_excerpt, first_seen)
         VALUES (?, ?, ?, ?, ?, ?)
     """, (url, title, category, severity, excerpt, datetime.now(timezone.utc).isoformat()))
+
+    # IMOs from full body_text (not the truncated excerpt), so mentions past
+    # the 1500-char cutoff aren't silently missed.
+    for imo in set(IMO_RE.findall(title + " " + body_text)):
+        conn.execute("""
+            INSERT OR IGNORE INTO uani_imo_mentions (imo, url, title, first_seen)
+            VALUES (?, ?, ?, ?)
+        """, (imo, url, title, datetime.now(timezone.utc).isoformat()))
+
     conn.commit()
 
     tag = "[!! HIGH !!]" if severity == "HIGH" else "[normal]"
