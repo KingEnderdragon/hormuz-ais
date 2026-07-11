@@ -2,3 +2,5 @@ websockets>=16.0
 python-dotenv>=1.0
 beautifulsoup4>=4.15
 filelock>=3.29
+plotly>=6.9
+kaleido>=1.3
