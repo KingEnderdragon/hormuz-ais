@@ -5,8 +5,11 @@ import time
 import urllib.request
 from datetime import datetime, timezone
 
+from filelock import FileLock, Timeout
+
 STATUS_URL = "https://straits.live/status"
 CSV_PATH = os.path.join(os.path.dirname(__file__), "straits_live_timeseries.csv")
+LOCK_PATH = CSV_PATH + ".lock"
 POLL_INTERVAL_SECONDS = 300  # matches straits.live's own fastest refresh cadence (5 min)
 
 HEADERS = {
@@ -112,27 +115,50 @@ def ensure_csv():
 
 
 def run():
-    ensure_csv()
-    print(f"Polling {STATUS_URL} every {POLL_INTERVAL_SECONDS}s -> {CSV_PATH}")
-    while True:
-        try:
-            data = fetch_status()
-            row = parse_row(data)
-            assert set(row.keys()) == set(CSV_FIELDS), (
-                f"parse_row() output doesn't match CSV_FIELDS: "
-                f"{set(row.keys()) ^ set(CSV_FIELDS)}"
-            )
-            with open(CSV_PATH, "a", newline="", encoding="utf-8") as f:
-                csv.DictWriter(f, fieldnames=CSV_FIELDS).writerow(row)
-            tag = f"[!! DARKENING {row['darkening_alert']} !!]" if row['darkening_alert'] in ("ELEVATED", "HIGH") else ""
-            print(f"{row['timestamp_utc']} status={row['verdict_status']} "
-                  f"crisis={row['crisis_pressure']} throughput={row['throughput_pct']}% "
-                  f"tankers/day={row['daily_tanker_count']} ais_gaps={row['ais_gaps_count']}"
-                  f"/baseline={row['ais_gaps_baseline_7d']} ratio={row['darkening_ratio']} {tag}")
-        except Exception as e:
-            print(f"Poll failed: {e}")
+    # Held for the entire lifetime of the poller: a second instance (e.g. an
+    # earlier run that never got cleanly stopped) fails fast on startup
+    # instead of silently writing an incompatible schema alongside this one.
+    # OS-level lock (fcntl/msvcrt under the hood via filelock), so it's
+    # released automatically if this process dies, even uncleanly - no
+    # stale-lock cleanup needed.
+    lock = FileLock(LOCK_PATH, timeout=0)
+    try:
+        lock.acquire()
+    except Timeout:
+        raise RuntimeError(
+            f"Another straits_poller.py instance already holds {LOCK_PATH} - "
+            f"refusing to start a second writer against {CSV_PATH}. This is "
+            f"exactly the condition that previously let an orphaned old-schema "
+            f"process corrupt the file for hours undetected."
+        )
 
-        time.sleep(POLL_INTERVAL_SECONDS)
+    try:
+        ensure_csv()
+        print(f"Polling {STATUS_URL} every {POLL_INTERVAL_SECONDS}s -> {CSV_PATH}")
+        while True:
+            try:
+                data = fetch_status()
+                row = parse_row(data)
+                if set(row.keys()) != set(CSV_FIELDS):
+                    # Explicit exception, not assert: assertions are stripped
+                    # under `python -O`, which would silently disable this check.
+                    raise ValueError(
+                        f"parse_row() output doesn't match CSV_FIELDS: "
+                        f"{set(row.keys()) ^ set(CSV_FIELDS)}"
+                    )
+                with open(CSV_PATH, "a", newline="", encoding="utf-8") as f:
+                    csv.DictWriter(f, fieldnames=CSV_FIELDS).writerow(row)
+                tag = f"[!! DARKENING {row['darkening_alert']} !!]" if row['darkening_alert'] in ("ELEVATED", "HIGH") else ""
+                print(f"{row['timestamp_utc']} status={row['verdict_status']} "
+                      f"crisis={row['crisis_pressure']} throughput={row['throughput_pct']}% "
+                      f"tankers/day={row['daily_tanker_count']} ais_gaps={row['ais_gaps_count']}"
+                      f"/baseline={row['ais_gaps_baseline_7d']} ratio={row['darkening_ratio']} {tag}")
+            except Exception as e:
+                print(f"Poll failed: {e}")
+
+            time.sleep(POLL_INTERVAL_SECONDS)
+    finally:
+        lock.release()
 
 
 if __name__ == "__main__":
