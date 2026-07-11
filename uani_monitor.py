@@ -117,19 +117,29 @@ def discover_links():
 
 def extract_and_store_imos(conn, url, title, body_text):
     """Splits IMO_RE candidates into valid mentions vs. check-digit
-    anomalies, and marks the post as processed at IMO_EXTRACTION_VERSION."""
+    anomalies, and marks the post as processed at IMO_EXTRACTION_VERSION.
+
+    Deletes this URL's existing mention/anomaly rows before regenerating
+    them, in the same transaction (no commit() in between) - re-extraction
+    (a backfill after a logic change, or simply re-scraping an article UANI
+    has edited) must not leave stale rows behind. INSERT OR IGNORE alone
+    only ever adds rows, it never removes ones that are no longer correct.
+    """
     now = datetime.now(timezone.utc).isoformat()
+    conn.execute("DELETE FROM uani_imo_mentions WHERE url = ?", (url,))
+    conn.execute("DELETE FROM uani_imo_extraction_anomalies WHERE url = ?", (url,))
+
     valid, invalid = 0, 0
     for candidate in set(IMO_RE.findall(title + " " + body_text)):
         if is_valid_imo(candidate):
             conn.execute("""
-                INSERT OR IGNORE INTO uani_imo_mentions (imo, url, title, first_seen)
+                INSERT INTO uani_imo_mentions (imo, url, title, first_seen)
                 VALUES (?, ?, ?, ?)
             """, (candidate, url, title, now))
             valid += 1
         else:
             conn.execute("""
-                INSERT OR IGNORE INTO uani_imo_extraction_anomalies
+                INSERT INTO uani_imo_extraction_anomalies
                 (candidate, url, title, reason, first_seen)
                 VALUES (?, ?, ?, ?, ?)
             """, (candidate, url, title, "failed_check_digit", now))
